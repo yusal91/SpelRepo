@@ -65,6 +65,7 @@ public class PlayerControl : MonoBehaviour
             {
                 //rb2D.velocity = new Vector2(rb2D.velocity.x, jumpForce);
                 rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                Debug.Log("Jumping");
             }
             
         }
