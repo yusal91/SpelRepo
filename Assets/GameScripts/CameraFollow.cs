@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         var xPos = Player.transform.position.x;
         var yPos = transform.position.y;
@@ -36,4 +36,6 @@ public class CameraFollow : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, playerPostion, offsetSmothing * Time.deltaTime);
     }
+
+    
 }

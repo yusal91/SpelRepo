@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     {
         gameIsPaused = false;        
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
         Debug.Log("Game is Resumed");
     }
 
@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         gameIsPaused = true;
-        Time.timeScale = 0f;
+        Time.timeScale = 0;
         Debug.Log("Game isPaused");
     }
 
