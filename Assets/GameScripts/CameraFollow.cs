@@ -20,10 +20,10 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        var xPos = Player.transform.position.x;
-        var yPos = transform.position.y;
-        var zPos = transform.position.z;
-        playerPostion = new Vector3(xPos, yPos, zPos);
+        var xPos = Player.transform.position.x;                 //camera följer spelare i x axel
+        var yPos = Player.transform.position.y;                 //camera följer spelare up i Y axel
+        var zPos = transform.position.z;                        // inga rörelse i Z axel,
+        playerPostion = new Vector3(xPos, yPos, zPos);           
 
         if(Player.transform.localScale.x > 0f)
         {

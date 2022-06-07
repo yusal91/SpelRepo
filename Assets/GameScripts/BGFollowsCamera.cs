@@ -17,7 +17,7 @@ public class BGFollowsCamera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = new Vector3(followCamera.transform.position.x, followCamera.transform.position.y, transform.position.z);
+        transform.position = new Vector3(followCamera.transform.position.x, followCamera.transform.position.y, transform.position.z); 
     }
 
    

@@ -5,8 +5,4 @@ using UnityEngine;
 public class CollectableCoins : MonoBehaviour
 {
     public string itemType;
-
-
-    
-
 }
