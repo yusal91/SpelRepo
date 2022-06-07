@@ -34,7 +34,7 @@ public class CameraFollow : MonoBehaviour
             playerPostion = new Vector3(playerPostion.x - offSet, playerPostion.y, playerPostion.z); 
         }
 
-        transform.position = Vector3.Lerp(transform.position, playerPostion, offsetSmothing * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, playerPostion, offsetSmothing * Time.deltaTime);      
     }
 
     

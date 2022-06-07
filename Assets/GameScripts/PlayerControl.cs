@@ -41,7 +41,8 @@ public class PlayerControl : MonoBehaviour
     void onMove()
     {
         Rotation();
-        rb2D.velocity = new Vector2(moveX * moveSpeed, rb2D.velocity.y);   
+        rb2D.velocity = new Vector2(moveX * moveSpeed, rb2D.velocity.y);    // skillnade mellan 2 fram "time.deltatime".
+        
     }
 
     void Rotation()
@@ -75,6 +76,6 @@ public class PlayerControl : MonoBehaviour
     {
         //var groundComponent = GetComponent<BoxCollider2D>();
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheck.GetComponent<CircleCollider2D>().radius, whatisGround);
-        Debug.Log("CheckifGrounded");
+        //Debug.Log("CheckifGrounded");
     }
 }
