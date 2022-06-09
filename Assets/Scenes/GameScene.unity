@@ -8704,9 +8704,33 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: d69f26467d127524482c6e024dba5070, type: 2}
+    - target: {fileID: 455904535998831496, guid: b837228119d282741a9b4417f198d9d9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5242524
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904535998831496, guid: b837228119d282741a9b4417f198d9d9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5242524
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904535998831496, guid: b837228119d282741a9b4417f198d9d9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9339623
+      objectReference: {fileID: 0}
     - target: {fileID: 1879800248682659904, guid: b837228119d282741a9b4417f198d9d9, type: 3}
       propertyPath: m_Name
       value: Mushroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473070163678500333, guid: b837228119d282741a9b4417f198d9d9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473070163678500333, guid: b837228119d282741a9b4417f198d9d9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473070163678500333, guid: b837228119d282741a9b4417f198d9d9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9333334
       objectReference: {fileID: 0}
     - target: {fileID: 5914386826735263722, guid: b837228119d282741a9b4417f198d9d9, type: 3}
       propertyPath: m_RootOrder
