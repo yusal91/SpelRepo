@@ -63,8 +63,8 @@ public class EnemyAi : MonoBehaviour
             nextID += idChangeValue;                                          // Apply the change on the nextID                                                                             
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
+   
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player"))                        // if enemy collides with player, player take damage.
         {
