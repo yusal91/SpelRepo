@@ -6,10 +6,18 @@ public class PlayerControl : MonoBehaviour
 {
     private Rigidbody2D rb2D;
 
+    [Header("Player Health")]
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    [Header("Health Bar")]
+    public HealthBarScripts healthBar;
+
     [Header("Movement Settings")]
-    private float moveX;
     public float moveSpeed;
+    private float moveX;    
     float scaleX;
+
     [Header("Jump Settings")]
     public float jumpForce;
 
@@ -23,14 +31,17 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        scaleX = transform.localScale.x;  
+        scaleX = transform.localScale.x;
+
+        currentHealth = maxHealth;                               // player HP at start
+        healthBar.SetMaxHealth(maxHealth);                       // callback från heatlbarscript - sätta HP till full "MaxHealth"
     }
 
     // Update is called once per frame
     void Update()
     {
         moveX = Input.GetAxisRaw("Horizontal");
-        Jumping();
+        Jumping();        
     }
 
     void FixedUpdate()
@@ -77,5 +88,11 @@ public class PlayerControl : MonoBehaviour
         //var groundComponent = GetComponent<BoxCollider2D>();
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheck.GetComponent<CircleCollider2D>().radius, whatisGround);
         //Debug.Log("CheckifGrounded");
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
 }
