@@ -20,6 +20,9 @@ public class PlayerControl : MonoBehaviour
 
     [Header("Jump Settings")]
     public float jumpForce;
+    public float fallMultiplier;
+    public float gravity = 9.8f;
+    Vector2 vecGravity;
 
     [Header("GroundCheck")]
     public bool isGrounded;
@@ -32,9 +35,12 @@ public class PlayerControl : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         scaleX = transform.localScale.x;
+        vecGravity = new Vector2(0, -Physics2D.gravity.y);       // falla ner snabare.
 
         currentHealth = maxHealth;                               // player HP at start
         healthBar.SetMaxHealth(maxHealth);                       // callback från heatlbarscript - sätta HP till full "MaxHealth"
+
+        rb2D.useFullKinematicContacts = true;
     }
 
     // Update is called once per frame
@@ -51,8 +57,11 @@ public class PlayerControl : MonoBehaviour
 
     void onMove()
     {
+
         Rotation();
-        rb2D.velocity = new Vector2(moveX * moveSpeed, rb2D.velocity.y);    // skillnade mellan 2 fram "time.deltatime".
+        
+        rb2D.velocity = new Vector2(moveX * moveSpeed, rb2D.velocity.y - gravity * Time.deltaTime);    // skillnade mellan 2 fram "time.deltatime".
+        
         
     }
 
@@ -78,21 +87,43 @@ public class PlayerControl : MonoBehaviour
                 //rb2D.velocity = new Vector2(rb2D.velocity.x, jumpForce);
                 rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 Debug.Log("Jumping");
-            }
-           
+            }              
         }
-             
+
+        if (rb2D.velocity.y < 0)
+        {
+            rb2D.velocity -= vecGravity * fallMultiplier * Time.deltaTime;     // behöver testa om man det går med time.deltaTime, som var recomanderat.  
+            //Debug.Log("VecGravity" + fallMultiplier);
+        }
+
     }
     void CheckIfGrounded()
     {
         //var groundComponent = GetComponent<BoxCollider2D>();
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheck.GetComponent<CircleCollider2D>().radius, whatisGround);
         //Debug.Log("CheckifGrounded");
-    }
+    }    
 
     public void TakeDamage(int damage)
-    {
+    {        
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    ContactPoint2D contact = collision.contacts[0];
+    //    Vector3 position = contact.point;
+    //    CheckIfGrounded();
+    //    rb2D.velocity = new Vector2(rb2D.velocity.y, 0);
+    //    Debug.Log(" y " + rb2D.velocity.y);
+    //}
+
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    CheckIfGrounded();  
+    //    rb2D.velocity = new Vector2(rb2D.velocity.y, 0);
+    //    Debug.Log(" y " + rb2D.velocity.y);      
+      
+    //}
 }

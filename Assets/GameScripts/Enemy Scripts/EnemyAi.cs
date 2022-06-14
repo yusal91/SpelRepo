@@ -60,16 +60,16 @@ public class EnemyAi : MonoBehaviour
                 idChangeValue = +1;
             }
 
-            nextID += idChangeValue;                                          // Apply the change on the nextID                                                                             
+            nextID += idChangeValue;                                             // Apply the change on the nextID                                                                             
         }
     }
    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))                        // if enemy collides with player, player take damage.
+        if (collision.gameObject.CompareTag("Player"))                        // if enemy collides with player, player take damage.
         {
             playerControl.TakeDamage(20);
-            Debug.Log("Player Taking Damage");
+            Debug.Log(playerControl);
         }
     }
 }
