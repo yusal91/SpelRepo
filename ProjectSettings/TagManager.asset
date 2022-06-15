@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectable
   - LandEnemy
+  - Teleporter
   layers:
   - Default
   - TransparentFX

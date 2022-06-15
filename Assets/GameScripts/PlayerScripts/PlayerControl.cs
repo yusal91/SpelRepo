@@ -13,6 +13,9 @@ public class PlayerControl : MonoBehaviour
     [Header("Health Bar")]
     public HealthBarScripts healthBar;
 
+    [Header("Audio Source")]
+    public AudioSource jumpSound;
+
     [Header("Movement Settings")]
     public float moveSpeed;
     private float moveX;    
@@ -82,6 +85,7 @@ public class PlayerControl : MonoBehaviour
         CheckIfGrounded();
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            jumpSound.Play();  
             if(isGrounded)
             {
                 //rb2D.velocity = new Vector2(rb2D.velocity.x, jumpForce);
