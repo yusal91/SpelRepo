@@ -110,20 +110,12 @@ public class PlayerControl : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    ContactPoint2D contact = collision.contacts[0];
-    //    Vector3 position = contact.point;
-    //    CheckIfGrounded();
-    //    rb2D.velocity = new Vector2(rb2D.velocity.y, 0);
-    //    Debug.Log(" y " + rb2D.velocity.y);
-    //}
-
-    //private void OnCollisionStay2D(Collision2D collision)
-    //{
-    //    CheckIfGrounded();  
-    //    rb2D.velocity = new Vector2(rb2D.velocity.y, 0);
-    //    Debug.Log(" y " + rb2D.velocity.y);      
-      
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("LandEnemy"))                        // if enemy collides with player, player take damage.
+        {
+            TakeDamage(15);
+            Debug.Log("Taking Damage");
+        }
+    }    
 }

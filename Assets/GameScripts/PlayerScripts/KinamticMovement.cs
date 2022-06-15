@@ -4,101 +4,101 @@ using UnityEngine;
 
 public class KinamticMovement : MonoBehaviour
 {
-    [SerializeField]
-    private Rigidbody2D rb2d;
-
-    [SerializeField]
-    private float speed = 500;
-    [SerializeField]
-    private float jumpSpeed = 8;
-    [SerializeField]
-    private float maxSpeedVertical = 3;
-
-    Vector2 movementVector = Vector2.zero;
+    //[SerializeField]
+    //private Rigidbody2D rb2d;
 
     //[SerializeField]
-    //private Animator animator;
-    [SerializeField]
-    private SpriteRenderer spriteRenderer;
+    //private float speed = 500;
+    //[SerializeField]
+    //private float jumpSpeed = 8;
+    //[SerializeField]
+    //private float maxSpeedVertical = 3;
 
-    [SerializeField]
-    bool isGrounded = false;
+    //Vector2 movementVector = Vector2.zero;
 
-    bool isGroundedCheckStop = false;
+    ////[SerializeField]
+    ////private Animator animator;
+    //[SerializeField]
+    //private SpriteRenderer spriteRenderer;
+
+    //[SerializeField]
+    //bool isGrounded = false;
+
+    //bool isGroundedCheckStop = false;
 
     
 
-    private void Awake()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
+    //private void Awake()
+    //{
+    //    rb2d = GetComponent<Rigidbody2D>();
         
-    }
+    //}
 
-    private void Update()
-    {
-        movementVector.x = Input.GetAxis("Horizontal") * this.speed;
+    //private void Update()
+    //{
+    //    movementVector.x = Input.GetAxis("Horizontal") * this.speed;
 
-        HandleMovementDirectionSpriteFlip();
+    //    HandleMovementDirectionSpriteFlip();
 
-        HandleGroundedCheck();
+    //    HandleGroundedCheck();
 
-        HandleJumpInput();
-    }
+    //    HandleJumpInput();
+    //}
 
-    private void HandleMovementDirectionSpriteFlip()
-    {
-        if (movementVector.x > 0)
-            spriteRenderer.flipX = false;
-        else if (movementVector.x < 0)
-            spriteRenderer.flipX = true;
-    }
+    //private void HandleMovementDirectionSpriteFlip()
+    //{
+    //    if (movementVector.x > 0)
+    //        spriteRenderer.flipX = false;
+    //    else if (movementVector.x < 0)
+    //        spriteRenderer.flipX = true;
+    //}
 
-    private void HandleGroundedCheck()
-    {
-        isGrounded = IsGrounded();
-        if (isGrounded)
-        {
-            //if (animator.GetBool("Jumping"))
+    //private void HandleGroundedCheck()
+    //{
+    //    isGrounded = IsGrounded();
+    //    if (isGrounded)
+    //    {
+    //        //if (animator.GetBool("Jumping"))
                 
-            //animator.SetBool("Jumping", false);
-            //animator.SetFloat("InputX", Mathf.Abs(movementVector.x));
-            movementVector.y = 0;
-        }
+    //        //animator.SetBool("Jumping", false);
+    //        //animator.SetFloat("InputX", Mathf.Abs(movementVector.x));
+    //        movementVector.y = 0;
+    //    }
 
-        Debug.DrawRay(transform.position, Vector2.down * 0.5f);
-    }
-    private bool IsGrounded()
-    {
-        if (isGroundedCheckStop)
-            return false;
-        RaycastHit2D result = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
-        return result.collider != null;
-    }
+    //    Debug.DrawRay(transform.position, Vector2.down * 0.5f);
+    //}
+    //private bool IsGrounded()
+    //{
+    //    if (isGroundedCheckStop)
+    //        return false;
+    //    RaycastHit2D result = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
+    //    return result.collider != null;
+    //}
 
-    private void HandleJumpInput()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {            
-            //animator.SetBool("Jumping", true);
-            isGrounded = false;
-            isGroundedCheckStop = true;
-            movementVector.y = jumpSpeed;
-            StartCoroutine(ResetGroundedCheckStop());
-        }
-    }
+    //private void HandleJumpInput()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+    //    {            
+    //        //animator.SetBool("Jumping", true);
+    //        isGrounded = false;
+    //        isGroundedCheckStop = true;
+    //        movementVector.y = jumpSpeed;
+    //        StartCoroutine(ResetGroundedCheckStop());
+    //    }
+    //}
 
-    private IEnumerator ResetGroundedCheckStop()
-    {
-        yield return new WaitForSeconds(0.5f);
-        isGroundedCheckStop = false;
-    }
+    //private IEnumerator ResetGroundedCheckStop()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    isGroundedCheckStop = false;
+    //}
 
-    private void FixedUpdate()
-    {
-        if (isGrounded == false)
-        {
-            movementVector.y += Physics2D.gravity.y * Time.fixedDeltaTime;
-        }
-        rb2d.MovePosition(rb2d.position + movementVector * Time.fixedDeltaTime);
-    }
+    //private void FixedUpdate()
+    //{
+    //    if (isGrounded == false)
+    //    {
+    //        movementVector.y += Physics2D.gravity.y * Time.fixedDeltaTime;
+    //    }
+    //    rb2d.MovePosition(rb2d.position + movementVector * Time.fixedDeltaTime);
+    //}
 }
