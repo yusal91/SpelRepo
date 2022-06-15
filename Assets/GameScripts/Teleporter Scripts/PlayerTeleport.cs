@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerTeleport : MonoBehaviour
 {
     private GameObject currentTeleporter;
-
+    public AudioSource teleportSound;
     
 
     // Update is called once per frame
@@ -13,6 +13,7 @@ public class PlayerTeleport : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
+            teleportSound.Play();
             if(currentTeleporter != null)
             {
                 transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;      // get current postion and get destination postion
