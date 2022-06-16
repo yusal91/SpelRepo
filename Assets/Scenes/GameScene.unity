@@ -3366,6 +3366,7 @@ GameObject:
   - component: {fileID: 353533262}
   - component: {fileID: 353533263}
   - component: {fileID: 353533264}
+  - component: {fileID: 353533265}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3528,6 +3529,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportSound: {fileID: 2037949110}
+--- !u!114 &353533265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353533257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2f9c7c56152da45993b6d32e35b6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelComplete: {fileID: 1199485653}
 --- !u!1001 &359479289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6051,7 +6065,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 625727841}
-  - component: {fileID: 625727842}
   m_Layer: 0
   m_Name: End of Level
   m_TagString: Untagged
@@ -6074,19 +6087,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &625727842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625727840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b2f9c7c56152da45993b6d32e35b6e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelComplete: {fileID: 1199485653}
 --- !u!1 &626936044
 GameObject:
   m_ObjectHideFlags: 0
@@ -6841,7 +6841,7 @@ GameObject:
   - component: {fileID: 698500611}
   m_Layer: 0
   m_Name: Final Collision
-  m_TagString: LevelComplete
+  m_TagString: CompleteLevel
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

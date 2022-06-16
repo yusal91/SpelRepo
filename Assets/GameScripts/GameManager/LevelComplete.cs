@@ -7,32 +7,27 @@ using UnityEngine.SceneManagement;
 public class LevelComplete : MonoBehaviour
 {
     public GameObject levelComplete;
-
-    private void Start()
-    {
-        levelComplete.SetActive(false);
-    }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    collision.gameObject.CompareTag("CompleteLevel");
-    //    levelComplete.SetActive(true);
-    //    Debug.Log(levelComplete);
-    //}
+    private PauseMenu pauseMenu;    
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {       
         if (collision.CompareTag("CompleteLevel"))
-        {
-            levelComplete.SetActive(true);
-            Debug.Log(levelComplete);
+        {            
+            LevelCompleted();
         }
+    }
+
+    public void LevelCompleted()
+    {
+        Debug.Log("Level Complete");
+        levelComplete.SetActive(true);
+        //pauseMenu.GetComponent<PauseMenu>().pauseMenuUI.SetActive(false);
     }
 
     public void RetryButton()
     {
-        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitButton()

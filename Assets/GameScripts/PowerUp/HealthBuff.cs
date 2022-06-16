@@ -9,8 +9,6 @@ public class HealthBuff : PowerUpEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<PlayerControl>().currentHealth +=amount;
-        Debug.Log(target);        
-        target.GetComponent<HealthBarScripts>().hpSlider.value = amount;
+        target.GetComponent<PlayerControl>().RestoreHealth(amount);      
     }
 }

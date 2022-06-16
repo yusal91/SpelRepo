@@ -83,15 +83,11 @@ public class PlayerControl : MonoBehaviour
     void Jumping()
     {
         CheckIfGrounded();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            jumpSound.Play();  
-            if(isGrounded)
-            {
-                //rb2D.velocity = new Vector2(rb2D.velocity.x, jumpForce);
-                rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                Debug.Log("Jumping");
-            }              
+            jumpSound.Play();
+            rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            Debug.Log("Jumping");                        
         }
 
         if (rb2D.velocity.y < 0)
@@ -102,8 +98,7 @@ public class PlayerControl : MonoBehaviour
 
     }
     void CheckIfGrounded()
-    {
-        //var groundComponent = GetComponent<BoxCollider2D>();
+    {        
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheck.GetComponent<CircleCollider2D>().radius, whatisGround);
         //Debug.Log("CheckifGrounded");
     }    
@@ -111,6 +106,12 @@ public class PlayerControl : MonoBehaviour
     public void TakeDamage(int damage)
     {        
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    public void RestoreHealth(int restore)
+    {
+        currentHealth += restore;
         healthBar.SetHealth(currentHealth);
     }
 
