@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     [Header("Player Health")]
     public int maxHealth = 100;
     public int currentHealth;
+    int noHealthLeft = 0;
 
     [Header("Health Bar")]
     public HealthBarScripts healthBar;
@@ -65,7 +66,12 @@ public class PlayerControl : MonoBehaviour
         
         rb2D.velocity = new Vector2(moveX * moveSpeed, rb2D.velocity.y - gravity * Time.deltaTime);    // skillnade mellan 2 fram "time.deltatime".
         
-        
+        //if(rb2D.velocity.y < -10)                                        // aktivera Game Over Canvas
+        //{                                                                
+        //    var gamOver = GetComponent<GameOverScript>();                // aktivera Game Over Canvas
+        //    Debug.Log(gamOver);
+        //    gamOver.GameOverScene();                                     // aktivera Game Over Canvas
+        //}
     }
 
     void Rotation()
@@ -113,6 +119,14 @@ public class PlayerControl : MonoBehaviour
     {
         currentHealth += restore;
         healthBar.SetHealth(currentHealth);
+    }
+
+    public void NoHealth()
+    {
+        currentHealth = noHealthLeft;
+        healthBar.SetHealth(currentHealth);
+        var gamOver = GetComponent<GameOverScript>();
+        gamOver.GameOverScene();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
