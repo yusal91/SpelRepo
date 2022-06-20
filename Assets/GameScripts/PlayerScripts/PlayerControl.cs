@@ -9,7 +9,7 @@ public class PlayerControl : MonoBehaviour
     [Header("Player Health")]
     public int maxHealth = 100;
     public int currentHealth;
-    int noHealthLeft = 0;
+    //int noHealthLeft = 0;
 
     [Header("Health Bar")]
     public HealthBarScripts healthBar;
@@ -65,13 +65,11 @@ public class PlayerControl : MonoBehaviour
         Rotation();
         
         rb2D.velocity = new Vector2(moveX * moveSpeed, rb2D.velocity.y - gravity * Time.deltaTime);    // skillnade mellan 2 fram "time.deltatime".
-        
-        //if(rb2D.velocity.y < -10)                                        // aktivera Game Over Canvas
-        //{                                                                
-        //    var gamOver = GetComponent<GameOverScript>();                // aktivera Game Over Canvas
-        //    Debug.Log(gamOver);
-        //    gamOver.GameOverScene();                                     // aktivera Game Over Canvas
-        //}
+
+        if (rb2D.velocity.y < -50)                                        
+        {
+            UiManager.instance.GameOverScene();                                   // aktivera Game Over Canvas
+        }
     }
 
     void Rotation()
@@ -121,9 +119,10 @@ public class PlayerControl : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void NoHealth()                                   //  need fixing
+    public void NoHealth()                                   //  player Dying    need fix here
     {
-        currentHealth += noHealthLeft;
+        int noHealthLeft = 0;
+        currentHealth = noHealthLeft;
         healthBar.SetHealth(currentHealth);
         UiManager.instance.GameOverScene();
     }

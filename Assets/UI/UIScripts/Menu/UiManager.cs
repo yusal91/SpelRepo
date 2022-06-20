@@ -25,6 +25,7 @@ public class UiManager : MonoBehaviour
     public void GameOverScene()
     {               
         gameOverCanvas.SetActive(true);
+        Time.timeScale = 0;
         Debug.Log("Game OVer");
         pauseMenu.enabled = false;
         Debug.Log("Pause Menu Deactivated");
@@ -41,6 +42,7 @@ public class UiManager : MonoBehaviour
     public void RetryButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 
     public void QuitButton()
