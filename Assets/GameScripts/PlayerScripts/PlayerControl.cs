@@ -121,12 +121,11 @@ public class PlayerControl : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void NoHealth()
+    public void NoHealth()                                   //  need fixing
     {
-        currentHealth = noHealthLeft;
+        currentHealth += noHealthLeft;
         healthBar.SetHealth(currentHealth);
-        var gamOver = GetComponent<GameOverScript>();
-        gamOver.GameOverScene();
+        UiManager.instance.GameOverScene();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -136,5 +135,13 @@ public class PlayerControl : MonoBehaviour
             TakeDamage(15);
             Debug.Log("Taking Damage");
         }
-    }    
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("CompleteLevel"))                            // level complete 
+        {
+            UiManager.instance.LevelCompleted();
+        }
+    }
 }
