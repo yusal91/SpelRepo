@@ -111,6 +111,7 @@ public class PlayerControl : MonoBehaviour
     {        
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        NoHealth();
     }
 
     public void RestoreHealth(int restore)
@@ -119,12 +120,12 @@ public class PlayerControl : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void NoHealth()                                   //  player Dying    need fix here
+    public void NoHealth()                                   //  Fixed 
     {
-        int noHealthLeft = 0;
-        currentHealth = noHealthLeft;
-        healthBar.SetHealth(currentHealth);
-        UiManager.instance.GameOverScene();
+        if (currentHealth <= 0)
+        {
+            UiManager.instance.GameOverScene();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
