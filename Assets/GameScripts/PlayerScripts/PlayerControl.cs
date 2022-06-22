@@ -65,8 +65,7 @@ public class PlayerControl : MonoBehaviour
         Rotation();
         
         rb2D.velocity = new Vector2(moveX * moveSpeed, rb2D.velocity.y - gravity * Time.deltaTime);    // skillnade mellan 2 fram "time.deltatime".
-
-        if (rb2D.velocity.y < -50)                                        
+        if (rb2D.velocity.y < -90)                                        
         {
             UiManager.instance.GameOverScene();                                   // aktivera Game Over Canvas
         }
@@ -124,7 +123,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            UiManager.instance.GameOverScene();
+            UiManager.instance.GameOverScene();            
         }
     }
 

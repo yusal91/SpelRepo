@@ -28,7 +28,7 @@ public class UiManager : MonoBehaviour
         Time.timeScale = 0;
         Debug.Log("Game OVer");
         pauseMenu.enabled = false;
-        Debug.Log("Pause Menu Deactivated");
+        Debug.Log("Pause Menu Deactivated");        
     }
 
     public void LevelCompleted()
