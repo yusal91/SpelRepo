@@ -1328,7 +1328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (11)
+      value: SilverCoin (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -1954,7 +1954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (2)
+      value: SilverCoin (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -2172,7 +2172,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (16)
+      value: BronzeCoin (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -2833,7 +2833,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (14)
+      value: BronzeCoin (11)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -3185,7 +3185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (14)
+      value: SilverCoin (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -3767,7 +3767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630297558206982996, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
       propertyPath: m_Name
-      value: GoldCoin
+      value: GoldCoin (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
@@ -5492,7 +5492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630297558206982996, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
       propertyPath: m_Name
-      value: GoldCoin (6)
+      value: GoldCoin (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
@@ -6113,7 +6113,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (6)
+      value: BronzeCoin (7)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -7039,7 +7039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (6)
+      value: SilverCoin (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -7409,7 +7409,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (15)
+      value: BronzeCoin (13)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -8272,7 +8272,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (2)
+      value: BronzeCoin (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -9501,7 +9501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630297558206982996, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
       propertyPath: m_Name
-      value: GoldCoin (13)
+      value: GoldCoin (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
@@ -10083,7 +10083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin
+      value: SilverCoin (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -10158,7 +10158,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (4)
+      value: BronzeCoin (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -10483,7 +10483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630297558206982996, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
       propertyPath: m_Name
-      value: GoldCoin (12)
+      value: GoldCoin (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
@@ -11464,7 +11464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170040053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 444.19, y: -43.23, z: 0}
+  m_LocalPosition: {x: 550.1, y: -49.5, z: 0}
   m_LocalScale: {x: 0.71187407, y: 0.89308006, z: 2.2327}
   m_Children: []
   m_Father: {fileID: 1167871882}
@@ -11734,7 +11734,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (11)
+      value: BronzeCoin (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -12199,7 +12199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630297558206982996, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
       propertyPath: m_Name
-      value: GoldCoin (14)
+      value: GoldCoin (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
@@ -13192,7 +13192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (13)
+      value: SilverCoin (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -14566,7 +14566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (1)
+      value: SilverCoin (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -15035,7 +15035,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (1)
+      value: BronzeCoin (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -15532,7 +15532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630297558206982996, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
       propertyPath: m_Name
-      value: GoldCoin (9)
+      value: GoldCoin (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9857d4c3526bb954b9fc76ef335a5a39, type: 3}
@@ -15985,7 +15985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (7)
+      value: SilverCoin (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -17523,7 +17523,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin
+      value: BronzeCoin (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -18471,7 +18471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862250714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 370.7, y: 1.5, z: 0}
+  m_LocalPosition: {x: 370.7, y: -21.2, z: 0}
   m_LocalScale: {x: 3.4131598, y: 4.285189, z: 1}
   m_Children: []
   m_Father: {fileID: 115560984}
@@ -19176,7 +19176,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (5)
+      value: BronzeCoin (6)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -19796,7 +19796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377033495948164127, guid: 82598c21930540e49b5ed1064e656326, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (12)
+      value: SilverCoin (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82598c21930540e49b5ed1064e656326, type: 3}
@@ -20229,7 +20229,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (10)
+      value: BronzeCoin (9)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder
@@ -20474,7 +20474,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399610859946495598, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_Name
-      value: BronzeCoin (3)
+      value: BronzeCoin (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4244179105077418770, guid: fcb56f9d3e38b0d41887325d70704892, type: 3}
       propertyPath: m_RootOrder

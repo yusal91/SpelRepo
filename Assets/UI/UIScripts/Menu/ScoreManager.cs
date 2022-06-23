@@ -48,10 +48,7 @@ public class ScoreManager : MonoBehaviour
         else if(itemType == "Gold Coin")
         {
             goldCoinCollected += 1;
-        }
-            
-
-
+        }           
 
         brozeCoin.text = bronzeCoinCollected.ToString() + " Bronze Coin  / 14 ";
         silverCoin.text = silverCoinCollected.ToString() + " Silver Coin / 10 ";
