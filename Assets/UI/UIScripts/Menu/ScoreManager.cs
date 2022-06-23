@@ -35,7 +35,7 @@ public class ScoreManager : MonoBehaviour
     public void AddCoins(string itemType)
     {
         Debug.Log(itemType);
-        //coinsCollected += 1;
+        
 
         if (itemType == "Bronze Coin")
         {
@@ -53,8 +53,8 @@ public class ScoreManager : MonoBehaviour
 
 
 
-        brozeCoin.text = bronzeCoinCollected.ToString() + " Bronze Coin ";
-        silverCoin.text = silverCoinCollected.ToString() + " Silver Coin ";
-        goldCoin.text = goldCoinCollected.ToString() + " Gold Coin ";
+        brozeCoin.text = bronzeCoinCollected.ToString() + " Bronze Coin  / 14 ";
+        silverCoin.text = silverCoinCollected.ToString() + " Silver Coin / 10 ";
+        goldCoin.text = goldCoinCollected.ToString() + " Gold Coin       / 7 ";
     }
 }
