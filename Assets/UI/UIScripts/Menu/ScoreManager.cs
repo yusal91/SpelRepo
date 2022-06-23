@@ -11,6 +11,11 @@ public class ScoreManager : MonoBehaviour
     public Text silverCoin;
     public Text goldCoin;
 
+    public int bronzeCoinCollected;
+    public int silverCoinCollected;
+    public int goldCoinCollected;
+
+
     int coinsCollected = 0;
     //int finalCollectedCoins = 0;
 
@@ -27,11 +32,29 @@ public class ScoreManager : MonoBehaviour
         goldCoin.text = coinsCollected.ToString() + " Gold Coin ";
     }
 
-    public void addCoins()
-    {        
-        coinsCollected += 1;
-        brozeCoin.text = coinsCollected.ToString() + " Bronze Coin ";
-        silverCoin.text = coinsCollected.ToString() + " Silver Coin ";
-        goldCoin.text = coinsCollected.ToString() + " Gold Coin ";
+    public void AddCoins(string itemType)
+    {
+        Debug.Log(itemType);
+        //coinsCollected += 1;
+
+        if (itemType == "Bronze Coin")
+        {
+            bronzeCoinCollected += 1;
+        }
+        else if(itemType == "Silver Coin")
+        {
+            silverCoinCollected += 1;
+        }
+        else if(itemType == "Gold Coin")
+        {
+            goldCoinCollected += 1;
+        }
+            
+
+
+
+        brozeCoin.text = bronzeCoinCollected.ToString() + " Bronze Coin ";
+        silverCoin.text = silverCoinCollected.ToString() + " Silver Coin ";
+        goldCoin.text = goldCoinCollected.ToString() + " Gold Coin ";
     }
 }
