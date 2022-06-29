@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAi : MonoBehaviour
-{
-    [Header("Player Script")]    
-    private PlayerControl playerControl;
-
-
+{    
     [Header("Enemy Transforms")]
     public List<Transform> points;          // Referance till väg punkt
 
@@ -63,14 +59,5 @@ public class EnemyAi : MonoBehaviour
             nextID += idChangeValue;                                             // Apply the change on the nextID                                                                             
         }
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))                        // if enemy collides with player, player take damage.
-    //    {
-    //        Debug.Log(playerControl);
-    //        playerControl.TakeDamage(20);
-
-    //    }
-    //}
+    
 }

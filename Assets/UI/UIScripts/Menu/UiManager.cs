@@ -13,13 +13,19 @@ public class UiManager : MonoBehaviour
     public GameObject levelComplete;
 
     [Header("Game Over Canvas")]
-    public GameObject gameOverCanvas;
- 
+    public GameObject gameOverCanvas; 
+
+    [Header("Final Score Text")]
+    public Text brozCoin;
+    public Text silvrCoin;
+    public Text golCoin;
+
+
 
     void Awake()
     {
         instance = this;
-        pauseMenu = GetComponent<PauseMenu>();
+        pauseMenu = GetComponent<PauseMenu>();        
     }  
 
     public void GameOverScene()
@@ -36,7 +42,11 @@ public class UiManager : MonoBehaviour
         Debug.Log("Level Complete");
         levelComplete.SetActive(true);
         pauseMenu.enabled = false;
-        //Debug.Log("Pause Menu Deactivated");        
+        Debug.Log("Pause Menu Deactivated");
+        
+        brozCoin.text = ScoreManager.instance.bronzeCoinCollected.ToString() + " Bronze Coin / 14 ";
+        silvrCoin.text = ScoreManager.instance.silverCoinCollected.ToString() + " Silver Coin / 10 ";
+        golCoin.text = ScoreManager.instance.goldCoinCollected.ToString() + " Gold Coin  / 7 ";
     }
 
     public void RetryButton()

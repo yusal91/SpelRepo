@@ -50,8 +50,8 @@ public class ScoreManager : MonoBehaviour
             goldCoinCollected += 1;
         }           
 
-        brozeCoin.text = bronzeCoinCollected.ToString() + " Bronze Coin  / 14 ";
+        brozeCoin.text = bronzeCoinCollected.ToString() + " Bronze Coin / 14 ";
         silverCoin.text = silverCoinCollected.ToString() + " Silver Coin / 10 ";
-        goldCoin.text = goldCoinCollected.ToString() + " Gold Coin       / 7 ";
+        goldCoin.text = goldCoinCollected.ToString() + " Gold Coin  / 7 ";
     }
 }
