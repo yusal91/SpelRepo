@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class sleepingEnemy : MonoBehaviour
 {
+    [Header ("Enemy Settings")]
     [SerializeField]
     private Transform player;
     [SerializeField]

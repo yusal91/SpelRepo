@@ -11,8 +11,8 @@ public class SpeedBuff : PowerUpEffect
     public override void Apply(GameObject target)
     {
         target.GetComponent<PlayerControl>().moveSpeed += amount;
-        target.GetComponent<SpriteRenderer>().color = Color.yellow;
-    }
+        target.GetComponent<SpriteRenderer>().color = Color.yellow;         
+    }    
 
     //IEnumerator TemporarySpeedIncressed(GameObject player)
     //{

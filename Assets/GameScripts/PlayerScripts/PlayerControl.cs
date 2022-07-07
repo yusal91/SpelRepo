@@ -44,7 +44,7 @@ public class PlayerControl : MonoBehaviour
         currentHealth = maxHealth;                               // player HP at start
         healthBar.SetMaxHealth(maxHealth);                       // callback från heatlbarscript - sätta HP till full "MaxHealth"
 
-        rb2D.useFullKinematicContacts = true;
+        //rb2D.useFullKinematicContacts = true;
     }
 
     // Update is called once per frame
@@ -98,7 +98,6 @@ public class PlayerControl : MonoBehaviour
             rb2D.velocity -= vecGravity * fallMultiplier * Time.deltaTime;     // behöver testa om man det går med time.deltaTime, som var recomanderat.  
             //Debug.Log("VecGravity" + fallMultiplier);
         }
-
     }
     void CheckIfGrounded()
     {        
@@ -115,8 +114,19 @@ public class PlayerControl : MonoBehaviour
 
     public void RestoreHealth(int restore)
     {
+        //if(currentHealth == maxHealth)
+        //{
+        //    maxHealth = currentHealth;
+        //    healthBar.SetHealth(currentHealth);
+        //} 
+        //else if(currentHealth != maxHealth)
+        //{
+        //    currentHealth += restore;
+        //    healthBar.SetHealth(currentHealth);
+        //}
+
         currentHealth += restore;
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth(currentHealth);  
     }
 
     public void NoHealth()                                   //  Fixed 

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerTeleport : MonoBehaviour
 {
     private GameObject currentTeleporter;
     public AudioSource teleportSound;
+    
     
 
     // Update is called once per frame
@@ -13,6 +15,7 @@ public class PlayerTeleport : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
+           
             teleportSound.Play();
             if(currentTeleporter != null)
             {
@@ -25,7 +28,7 @@ public class PlayerTeleport : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Teleporter"))
-        {
+        {            
             currentTeleporter = collision.gameObject;
             Debug.Log("Using Teleporter");
         }
