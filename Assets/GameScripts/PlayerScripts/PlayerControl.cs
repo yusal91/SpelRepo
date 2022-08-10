@@ -65,9 +65,12 @@ public class PlayerControl : MonoBehaviour
         Rotation();
         
         rb2D.velocity = new Vector2(moveX * moveSpeed, rb2D.velocity.y - gravity * Time.deltaTime);    // skillnade mellan 2 fram "time.deltatime".
+
         if (rb2D.velocity.y < -90)                                        
-        {
+        {            
             UiManager.instance.GameOverScene();                                   // aktivera Game Over Canvas
+            currentHealth = 0;
+            healthBar.SetHealth(currentHealth);                                // health goes to 0
         }
     }
 
@@ -105,28 +108,25 @@ public class PlayerControl : MonoBehaviour
         //Debug.Log("CheckifGrounded");
     }    
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damageTaken)
     {        
-        currentHealth -= damage;
+        currentHealth -= damageTaken;
         healthBar.SetHealth(currentHealth);
         NoHealth();
     }
 
-    public void RestoreHealth(int restore)
+    public void RestoreHealth(int restoreHealth)
     {
-        //if(currentHealth == maxHealth)
-        //{
-        //    maxHealth = currentHealth;
-        //    healthBar.SetHealth(currentHealth);
-        //} 
-        //else if(currentHealth != maxHealth)
-        //{
-        //    currentHealth += restore;
-        //    healthBar.SetHealth(currentHealth);
-        //}
-
-        currentHealth += restore;
-        healthBar.SetHealth(currentHealth);  
+        if (currentHealth < maxHealth)
+        {            
+            currentHealth += restoreHealth;
+            healthBar.SetHealth(currentHealth);
+        }
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+            healthBar.SetHealth(currentHealth);
+        }       
     }
 
     public void NoHealth()                                   //  Fixed 

@@ -8,6 +8,7 @@ public class UiManager : MonoBehaviour
 {
     public static UiManager instance;
     private PauseMenu pauseMenu;
+    private PlayerControl playerControl;
 
     [Header("Level Complete Canvas")]
     public GameObject levelComplete;
@@ -25,7 +26,8 @@ public class UiManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        pauseMenu = GetComponent<PauseMenu>();        
+        pauseMenu = GetComponent<PauseMenu>();
+        playerControl = FindObjectOfType<PlayerControl>();
     }  
 
     public void GameOverScene()
@@ -41,12 +43,13 @@ public class UiManager : MonoBehaviour
     {
         Debug.Log("Level Complete");
         levelComplete.SetActive(true);
-        pauseMenu.enabled = false;
+        pauseMenu.enabled = false;       
         Debug.Log("Pause Menu Deactivated");
         
         brozCoin.text = ScoreManager.instance.bronzeCoinCollected.ToString() + " Bronze Coin / 14 ";
         silvrCoin.text = ScoreManager.instance.silverCoinCollected.ToString() + " Silver Coin / 10 ";
         golCoin.text = ScoreManager.instance.goldCoinCollected.ToString() + " Gold Coin  / 7 ";
+        playerControl.enabled = false;
     }
 
     public void RetryButton()
