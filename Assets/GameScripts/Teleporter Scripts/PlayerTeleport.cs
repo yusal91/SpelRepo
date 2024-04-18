@@ -7,15 +7,20 @@ public class PlayerTeleport : MonoBehaviour
 {
     private GameObject currentTeleporter;
     public AudioSource teleportSound;
-    
+
+    public List<TeleportClass> teleportList;
+
+
+    public bool canTeleport;
+
+    public TeleportClass GetTeleportByIndex(int index) => teleportList[index];
     
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.F) && canTeleport)
         {
-           
             teleportSound.Play();
             if(currentTeleporter != null)
             {
@@ -28,8 +33,9 @@ public class PlayerTeleport : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Teleporter"))
-        {            
+        {
             currentTeleporter = collision.gameObject;
+            canTeleport = true;
             Debug.Log("Using Teleporter");
         }
     }
@@ -41,7 +47,14 @@ public class PlayerTeleport : MonoBehaviour
             if(collision.gameObject == currentTeleporter)
             {
                 currentTeleporter = null;
+                canTeleport = false;
             }
         }
     }
+}
+[System.Serializable]
+public class TeleportClass
+{
+    public Transform teleportFrom;
+    public Transform teleportToDestination;
 }

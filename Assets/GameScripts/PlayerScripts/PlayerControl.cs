@@ -19,7 +19,7 @@ public class PlayerControl : MonoBehaviour
 
     [Header("Movement Settings")]
     public float moveSpeed;
-    private float moveX;    
+    private float moveX;
     float scaleX;
 
     [Header("Jump Settings")]
@@ -51,12 +51,12 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxisRaw("Horizontal");
-        Jumping();        
+        Jumping();
     }
 
     void FixedUpdate()
     {
-        onMove();        
+        onMove();
     }
 
     void onMove()
@@ -133,7 +133,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            UiManager.instance.GameOverScene();            
+            UiManager.instance.GameOverScene();
         }
     }
 
