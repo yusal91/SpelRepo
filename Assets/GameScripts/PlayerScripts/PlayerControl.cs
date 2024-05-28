@@ -1,10 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
     private Rigidbody2D rb2D;
+
+    [Header("Fireball and shooting transform")]
+    public GameObject shootingPoint;
+    public Fireball fireballPrefab;
 
     [Header("Player Health")]
     public int maxHealth = 100;
@@ -52,11 +54,21 @@ public class PlayerControl : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         Jumping();
+        CastingFireball();
     }
 
     void FixedUpdate()
     {
-        onMove();
+        onMove();        
+    }
+
+    private void CastingFireball()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Instantiate(fireballPrefab, shootingPoint.transform.position, shootingPoint.transform.rotation);
+            Debug.Log("PressingButton T");
+        }
     }
 
     void onMove()
@@ -78,7 +90,7 @@ public class PlayerControl : MonoBehaviour
     {
         if(moveX > 0)
         {
-            transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);          
         }
         if(moveX < 0)
         {

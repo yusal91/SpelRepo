@@ -10626,6 +10626,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1336526506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903537433618822911, guid: ca7ec5f697757ad46a3c210893199c9d, type: 3}
+  m_PrefabInstance: {fileID: 2903537433990273859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1338388233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16762,6 +16767,14 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 1887997600}
+    - target: {fileID: 2903537434309977613, guid: ca7ec5f697757ad46a3c210893199c9d, type: 3}
+      propertyPath: shootingPoint
+      value: 
+      objectReference: {fileID: 1336526506}
+    - target: {fileID: 2903537434309977613, guid: ca7ec5f697757ad46a3c210893199c9d, type: 3}
+      propertyPath: fireballPrefab
+      value: 
+      objectReference: {fileID: 6490381971585298881, guid: c092362104b5ade4392ddfc78a97bf5a, type: 3}
     - target: {fileID: 2903537434309977614, guid: ca7ec5f697757ad46a3c210893199c9d, type: 3}
       propertyPath: m_RootOrder
       value: 3

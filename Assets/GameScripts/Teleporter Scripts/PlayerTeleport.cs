@@ -25,7 +25,7 @@ public class PlayerTeleport : MonoBehaviour
             if(currentTeleporter != null)
             {
                 transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;      // get current postion and get destination postion
-                Debug.Log("Teleported");
+                Debug.Log("Teleported");  
             }
         }
     }
