@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemClass : ScriptableObject
@@ -15,4 +13,11 @@ public class ItemClass : ScriptableObject
 
     [field: Range(1, 99)]
     [field: SerializeField] public int StackSize { get; private set; }    // again don't set the size from the script
+
+    public EquipItem equipItem;
+}
+
+public enum EquipItem
+{
+    None, ConsumeAble, Weapon, Armor
 }
